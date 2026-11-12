@@ -28,8 +28,26 @@
     </div>
 
     <div class="container-fluid">
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i> Thông báo!</h4>
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if($errors->any())
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i> Thông báo!</h4>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
         <div class="row">
-\
             <div class="col-lg-4 col-xlg-3 col-md-5">
                 <div class="card">
                     <div class="card-body">
@@ -60,8 +78,9 @@
             <div class="col-lg-8 col-xlg-9 col-md-7">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material">
-                            
+                        <form action="{{ route('admin.profile.update') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+
                             <div class="form-group">
                                 <label class="col-md-12">Full Name</label>
                                 <div class="col-md-12">
@@ -109,10 +128,16 @@
                                     </select>
                                 </div>
                             </div>
-
+                            
+                            <div class="form-group">
+                                <label class="col-md-12">Avatar</label>
+                                <div class="col-md-12">
+                                    <input type="file" name="avatar" class="form-control form-control-line" accept="image/*">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <button type="button" class="btn btn-success">Update Profile</button>
+                                    <button type="submit" class="btn btn-success">Update Profile</button>
                                 </div>
                             </div>
                         </form>
