@@ -83,7 +83,7 @@ class UserController extends Controller
             }
             return redirect()->back()->with('success', __ ('Update profile success'));
         } else {
-            return redirect()->back()->with('Error', __ ('Update profile error'));
+            return redirect()->back()->withErrors ('Update profile error.');
         }
     }
 }

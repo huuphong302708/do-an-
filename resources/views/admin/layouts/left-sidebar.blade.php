@@ -23,6 +23,7 @@
                             <span class="hide-menu">Profile</span>
                         </a>
                     </li>
+                    
                 </ul>
             </nav>
         </div>

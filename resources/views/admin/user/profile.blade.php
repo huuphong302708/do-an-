@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  @extends('admin.layouts.app')
+ @extends('admin.layouts.app')
 
     @section('content')
     <div class="page-breadcrumb">
@@ -52,7 +44,7 @@
                 <div class="card">
                     <div class="card-body">
                         <center class="m-t-30"> 
-                            <img src="{{ asset('admin/images/users/5.jpg') }}" class="rounded-circle" width="150" height="150" style="object-fit: cover;" />
+                            <img src="{{ Auth::user()->avatar ? asset('upload/user/avatar/' . Auth::user()->avatar) : asset('admin/images/users/5.jpg') }}" class="rounded-circle" width="150" height="150" style="object-fit: cover;" />
                             
                             <h4 class="card-title m-t-10">{{ Auth::user()->name }}</h4>
                             
@@ -148,5 +140,3 @@
         </div>
     </div>
     @endsection
-</body>
-</html>
