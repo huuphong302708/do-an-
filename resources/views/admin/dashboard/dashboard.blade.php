@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    @extends('admin.layouts.app')
+@extends('admin.layouts.app')
 
-    @section('content')
-    <!-- Tiêu đề trang -->
+@section('content')
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-5 align-self-center">
@@ -28,7 +19,6 @@
         </div>
     </div>
 
-    <!-- Nội dung thống kê (Lấy nguyên bản từ template HTML gốc sang) -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
@@ -70,7 +60,6 @@
             </div>
         </div>
 
-        <!-- Bảng danh sách sản phẩm bán chạy gần đây -->
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -107,6 +96,4 @@
             </div>
         </div>
     </div>
-    @endsection
-</body>
-</html>
+@endsection
