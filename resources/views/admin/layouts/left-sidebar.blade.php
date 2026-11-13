@@ -15,19 +15,6 @@
                         <span class="hide-menu">Profile</span>
                     </a>
                 </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.country.index') }}" aria-expanded="false">
-                        <i class="mdi mdi-earth"></i>
-                        <span class="hide-menu">Country</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.blog.index') }}" aria-expanded="false">
-                        <i class="mdi mdi-notebook"></i>
-                        <span class="hide-menu">Blog</span>
-                    </a>
-                </li>
             </ul>
         </nav>
     </div>
