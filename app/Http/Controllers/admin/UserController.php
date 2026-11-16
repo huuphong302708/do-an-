@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Country;
 use App\Http\Requests\UpdateProfileRequest;
 
 class UserController extends Controller
@@ -55,9 +56,10 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
-    public function profile(){
-        $user = auth()->user();
-        return view('admin.user.profile', compact('user'));
+    public function profile()
+    {
+        $countries = Country::all();
+        return view('admin.user.profile', compact('countries'));
     }
     /**
      * Update the specified resource in storage.

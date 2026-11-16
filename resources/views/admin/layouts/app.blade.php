@@ -10,6 +10,22 @@
     <link href="{{ asset('admin/css/style.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/libs/chartist/dist/chartist.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css') }}" rel="stylesheet">
+    <style>
+        /* Cố định sidebar luôn mở rộng đầy đủ chữ và icon */
+        .left-sidebar {
+            width: 250px !important;
+            z-index: 10;
+        }
+        .page-wrapper {
+            margin-left: 250px !important;
+        }
+        .hide-menu {
+            display: inline-block !important;
+        }
+        .topbar .top-navbar .navbar-header {
+            width: 250px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +48,6 @@
     <script src="{{ asset('admin/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/libs/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('admin/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/js/app-style-switcher.js') }}"></script>
     <script src="{{ asset('admin/js/waves.js') }}"></script>
     <script src="{{ asset('admin/js/sidebarmenu.js') }}"></script>
     <script src="{{ asset('admin/js/custom.min.js') }}"></script>

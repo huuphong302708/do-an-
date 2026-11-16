@@ -63,6 +63,9 @@
 
                         <small class="text-muted p-t-30 db">Address</small>
                         <h6>{{ Auth::user()->address ?? 'Chưa cập nhật' }}</h6>
+
+                        <small class="text-muted p-t-30 db">Country</small>
+                        <h6>{{ Auth::user()->country->name ?? 'Chưa cập nhật' }}</h6>
                     </div>
                 </div>
             </div>
@@ -113,10 +116,11 @@
                                 <div class="col-sm-12">
                                     <select class="form-control form-control-line" name="id_country">
                                         <option value="">-- Chọn quốc gia --</option>
-                                        <option value="1">Việt Nam</option>
-                                        <option value="2">Mỹ (USA)</option>
-                                        <option value="3">Nhật Bản</option>
-                                        <option value="4">Hàn Quốc</option>
+                                        @foreach($countries as $country)
+                                            <option value="{{ $country->id }}" {{ Auth::user()->id_country == $country->id ? 'selected' : '' }}>
+                                                {{ $country->name }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
