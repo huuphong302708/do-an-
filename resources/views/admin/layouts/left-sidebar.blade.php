@@ -16,7 +16,6 @@
                     </a>
                 </li>
 
-                <!-- Menu Country -->
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.country.index') }}" aria-expanded="false">
                         <i class="mdi mdi-earth"></i>

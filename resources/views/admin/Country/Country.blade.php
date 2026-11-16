@@ -41,10 +41,10 @@
                                     <td>{{ $country->id }}</td>
                                     <td>{{ $country->name }}</td>
                                     <td>
-                                        <a href="{{ route('admin.country.edit', $country->id) }}" class="btn btn-sm btn-info text-white">Edit</a>
+                                        <a href="{{ route('admin.country.edit', $country->id) }}" class="btn btn-sm btn-secondary text-white">Edit</a>
                                         <a href="{{ route('admin.country.delete', $country->id) }}" 
                                            onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" 
-                                           class="btn btn-sm btn-danger text-white">Delete</a>
+                                           class="btn btn-sm btn-secondary text-white">Delete</a>
                                     </td>
                                 </tr>
                             @empty
