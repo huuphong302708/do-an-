@@ -44,7 +44,7 @@
             </footer>
         </div>
     </div>
-
+    
     <script src="{{ asset('admin/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/libs/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('admin/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>

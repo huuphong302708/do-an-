@@ -30,9 +30,9 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col"># ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Action</th>
+                                <th ># ID</th>
+                                <th >Name</th>
+                                <th >Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,7 +41,6 @@
                                     <td>{{ $country->id }}</td>
                                     <td>{{ $country->name }}</td>
                                     <td>
-                                        <a href="{{ route('admin.country.edit', $country->id) }}" class="btn btn-sm btn-secondary text-white">Edit</a>
                                         <a href="{{ route('admin.country.delete', $country->id) }}" 
                                            onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" 
                                            class="btn btn-sm btn-secondary text-white">Delete</a>

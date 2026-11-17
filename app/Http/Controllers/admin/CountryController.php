@@ -32,28 +32,6 @@ class CountryController extends Controller
         return redirect()->route('admin.country.index')->with('success', 'Thêm quốc gia thành công!');
     }
 
-    public function edit($id)
-    {
-        $country = Country::findOrFail($id);
-        return view('admin.Country.edit', compact('country'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-        ], [
-            'name.required' => 'Vui lòng nhập tên quốc gia',
-        ]);
-
-        $country = Country::findOrFail($id);
-        $country->update([
-            'name' => $request->name,
-        ]);
-
-        return redirect()->route('admin.country.index')->with('success', 'Cập nhật quốc gia thành công!');
-    }
-
     public function delete($id)
     {
         $country = Country::findOrFail($id);
